@@ -1,0 +1,166 @@
+:root {
+  --primary: #B6AE9F;
+  --secondary: #C5C7BC;
+  --light: #DEDED1;
+  --card: #FBF3D9;
+
+  /* light variations */
+  --card-soft: #fdf8ea;
+  --shadow: rgba(0, 0, 0, 0.08);
+}
+
+/* 🔷 BODY */
+body {
+  margin: 0;
+  background: linear-gradient(to right, var(--light), var(--secondary));
+  font-family: Arial, sans-serif;
+}
+
+/* 🔷 NAVBAR */
+.navbar {
+  height: 70px;
+  width: 100%;
+  background: var(--card);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-sizing: border-box;
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Highlight text */
+.highlight {
+  color: var(--primary);
+  margin-left: 5px;
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  color: #555;
+  font-size: 16px;
+}
+
+.nav-links span {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-links span:hover {
+  color: var(--primary);
+}
+
+/* 🔷 MAIN LAYOUT */
+.container {
+  height: calc(100vh - 70px);
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+  box-sizing: border-box;
+}
+
+/* 🎥 VIDEO SECTION */
+.video-box {
+  flex: 1.2;
+  background: var(--card);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-shadow: 0 10px 25px var(--shadow);
+}
+
+.video {
+  width: 85%;
+  height: 80%;
+  border-radius: 15px;
+  object-fit: contain;
+}
+
+/* 🔷 RIGHT PANEL */
+.right-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ▶ PLAY BOX */
+.play-box {
+  flex: 1;
+  background: var(--secondary);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ▶ PLAY BUTTON */
+.play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px var(--shadow);
+  position: relative;
+}
+
+/* Hover effect */
+.play-btn:hover {
+  transform: scale(1.1);
+  background: #a59d90;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Click effect */
+.play-btn:active {
+  transform: scale(0.95);
+}
+
+/* Glow effect */
+.play-btn::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--primary);
+  opacity: 0.2;
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* 🎵 ICON */
+.play-icon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+/* 💬 TEXT BOX */
+.text-box {
+  flex: 2;
+  background: var(--card-soft);
+  border-radius: 20px;
+  padding: 20px;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+  box-shadow: 0 8px 20px var(--shadow);
+}
